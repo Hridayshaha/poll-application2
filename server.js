@@ -17,7 +17,10 @@ const DB_CONNECT =
 // Server Configuration
 const server = http.createServer(app);
 mongoose
-  .connect(DB_CONNECT)
+  .connect(DB_CONNECT, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => {
     server.listen(PORT, () => {
       console.log("Server listening on port " + PORT);
