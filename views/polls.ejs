@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Poll List</title>
+    <link rel="shortcut icon" href="./images/fav.png" type="image/png" />
+    <!-- Tailwind CSS Connection Library -->
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-blue-100 py-10 md:py-20">
+    <div class="flex items-center main">
+      <div class="container mx-auto px-2 md:py-0">
+        <div
+          class="
+            form-container
+            py-10
+            px-2
+            md:py-12 md:px-20
+            bordered
+            shadow-lg
+            rounded-3xl
+            ring-1 ring-gray-300
+            bg-white
+          "
+        >
+          <h1
+            class="
+              text-center text-3xl
+              md:text-6xl
+              font-bold
+              uppercase
+              pb-2
+              md:pb-4
+            "
+          >
+            All <span class="text-blue-500">Polls</span>
+          </h1>
+
+          <div class="p-4" id="polls">
+            <ul>
+              <% for (poll of polls) { %>
+              <li
+                class="
+                  p-4
+                  border
+                  text-md
+                  md:text-2xl
+                  rounded
+                  capitalize
+                  font-normal
+                  text-center text-black-400
+                  hover:text-blue-500
+                  my-2
+                "
+              >
+                <a href="/polls/<%=poll._id%>"><%= poll.title %></a>
+              </li>
+              <% } %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
