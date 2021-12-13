@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "description": "Simple voting website",
   "engines": {
-    "node": "v16.4.0",
-    "npm": "7.19.0"
+    "node": "v16.x",
+    "npm": "7.x"
   },
   "main": "./server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "postinstall": "ng build --aot"
+    "heroku-postbuild": "ng build --prod"
   },
   "keywords": [],
   "author": "",
