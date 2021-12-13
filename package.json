@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Simple voting website",
   "engines": {
-    "node": "v16.x",
+    "node": "16.x",
     "npm": "7.x"
   },
   "main": "./server.js",
