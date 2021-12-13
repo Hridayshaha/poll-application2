@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Simple voting website",
   "engines": {
-    "node": "16.x",
-    "npm": "7.x"
+    "node": "16.4.0",
+    "npm": "7.19.0"
   },
   "main": "./server.js",
   "scripts": {
